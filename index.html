@@ -1,11 +1,10 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>vgmireland | Portfolio Musical</title>
+    <title>VGM Ireland | Music Portfolio</title>
     <style>
-        /* Estilos básicos para que no se vea feo mientras trabajamos */
         body {
             background-color: #121214;
             color: #e1e1e6;
@@ -16,7 +15,7 @@
             justify-content: center;
             min-height: 100vh;
             margin: 0;
-            padding: 20px;
+            padding: 40px 20px;
             box-sizing: border-box;
         }
         .container {
@@ -28,36 +27,46 @@
             color: #ffffff;
             margin-bottom: 5px;
             font-size: 2.5rem;
+            letter-spacing: -0.5px;
         }
         p.subtitle {
             color: #a8a8b3;
-            font-size: 1.2rem;
+            font-size: 1.1rem;
             margin-top: 0;
-            margin-bottom: 30px;
+            margin-bottom: 35px;
+            font-weight: 300;
         }
         .player-container {
-            background: #202024;
-            padding: 10px;
+            display: flex;
+            justify-content: center;
+            margin-bottom: 35px;
+        }
+        .player-container iframe {
             border-radius: 8px;
-            margin-bottom: 30px;
-            border: 1px solid #323238;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
         }
         .links {
             display: flex;
             flex-direction: column;
-            gap: 15px;
+            gap: 12px;
+            max-width: 350px;
+            margin: 0 auto;
         }
         .btn {
-            background-color: #41414d;
+            background-color: #202024;
             color: #ffffff;
-            padding: 12px 20px;
+            padding: 14px 20px;
             border-radius: 6px;
             text-decoration: none;
-            font-weight: bold;
-            transition: background 0.2s;
+            font-weight: 600;
+            font-size: 0.95rem;
+            border: 1px solid #323238;
+            transition: all 0.2s ease;
         }
         .btn:hover {
-            background-color: #57576b;
+            background-color: #2b2b32;
+            border-color: #41414d;
+            transform: translateY(-1px);
         }
     </style>
 </head>
@@ -65,16 +74,16 @@
 
     <div class="container">
         <h1>vgmireland</h1>
-        <p class="subtitle">Compositor y Diseñador de Sonido</p>
+        <p class="subtitle">Composer and sound designer</p>
 
         <div class="player-container">
-            <p style="color: #a8a8b3; padding: 20px 0;">Aquí irá tu reproductor de Bandcamp</p>
-            </div>
+            <iframe style="border: 0; width: 350px; height: 442px;" src="https://bandcamp.com/EmbeddedPlayer/track=4073007425/size=large/bgcol=333333/linkcol=e99708/tracklist=false/transparent=true/" seamless><a href="https://vgmireland.bandcamp.com/track/the-long-journey">The Long Journey by Garman Blue</a></iframe>
+        </div>
 
         <div class="links">
-            <a href="#" class="btn" target="_blank">Escuchar en Bandcamp</a>
+            <a href="https://vgmireland.bandcamp.com/" class="btn" target="_blank">Visit Bandcamp</a>
             <a href="#" class="btn" target="_blank">LinkedIn</a>
-            <a href="mailto:tu-correo@ejemplo.com" class="btn">Contacto por Email</a>
+            <a href="mailto:tu-correo@ejemplo.com" class="btn">Email contact</a>
         </div>
     </div>
 
