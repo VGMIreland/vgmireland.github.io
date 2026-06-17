@@ -144,12 +144,12 @@
             border: 1px solid rgba(212, 175, 55, 0.2);
         }
 
-        /* Botones de Enlace Estilo Premium */
+        /* Botones de Enlace Estilo Premium (Formato Grid de 2 Columnas) */
         .links {
-            display: flex;
-            flex-direction: column;
-            gap: 15px;
-            max-width: 400px;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr); /* Crea dos columnas de igual tamaño */
+            gap: 15px; /* Espacio entre los botones */
+            max-width: 550px; /* Ampliamos un pelín el ancho para que quepan bien en parejas */
             margin: 0 auto;
         }
 
@@ -175,6 +175,14 @@
             transform: translateY(-2px);
             box-shadow: 0 7px 14px rgba(212, 175, 55, 0.1);
         }
+
+        /* Ajuste para pantallas pequeñas (Móviles) */
+        @media (max-width: 500px) {
+            .links {
+                grid-template-columns: 1fr; /* Pasa a 1 sola columna en móviles */
+            }
+        }
+        
     </style>
 </head>
 <body>
