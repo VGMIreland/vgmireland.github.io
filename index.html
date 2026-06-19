@@ -7,15 +7,13 @@
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght=500;700&family=Inter:wght=300;400;600&display=swap" rel="stylesheet">
 
-<!-- favicon -->
+    <link rel="stylesheet" href="css/style.css">
+
     <link rel="icon" type="image/png" href="assets/favicons/favicon.png">
 
-<!-- undertitle -->
     <meta name="description" content="VGM Ireland portfolio - Music compositor and sound designer for interactive media.">
-
-<!-- miniature for social media share -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://vgmireland.com/">
     <meta property="og:title" content="VGM Ireland | Musical Portfolio">
@@ -23,169 +21,18 @@
     <meta property="og:image" content="https://vgmireland.com/assets/images/vgmi-img-share.png">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
-
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:url" content="https://vgmireland.com/">
     <meta name="twitter:title" content="vgmireland | Musical Portfolio">
     <meta name="twitter:description" content="Video game music composer and sound designer. Check out my latest tracks on Bandcamp.">
     <meta name="twitter:image" content="https://vgmireland.com/assets/images/vgmi-img-share.png">
-
-    <style>
-        /* Paleta de colores basada en tu identidad:
-           Fondo: Azul muy oscuro/Negro (#0a0d14)
-           Acentos: Dorado (#d4af37 / #bfa15f) y Gris Plata (#c0c0c0)
-        */
-        body {
-            background-color: #0a0d14;
-            /* Degradado radial sutil para dar sensación de iluminación cinemática de fondo */
-            background-image: radial-gradient(circle at center, #101622 0%, #05070b 100%);
-            color: #e1e1e6;
-            font-family: 'Inter', sans-serif;
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            min-height: 100vh;
-        }
-
-        /* Banner Principal de la Web */
-        .hero-banner {
-    width: 100%;
-    max-width: 1200px;
-    max-height: 330px; /* Al añadir esto, limitamos la altura máxima */
-    margin-top: 20px;
-    border-radius: 12px;
-    overflow: hidden;
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6);
-    border: none;
-        }
-
-        .hero-banner img {
-            width: 100%;
-            height: auto;
-            display: block;
-        }
-
-        /* Contenedor Principal */
-        .container {
-            max-width: 800px;
-            width: 100%;
-            padding: 40px 20px;
-            box-sizing: border-box;
-            text-align: center;
-        }
-
-        /* Títulos con la fuente Cinzel */
-        h1 {
-            font-family: 'Cinzel', serif;
-            color: #d4af37; /* Dorado principal */
-            margin-top: 20px;
-            margin-bottom: 5px;
-            font-size: 3rem;
-            letter-spacing: 2px;
-            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
-        }
-
-        .subtitle {
-            font-family: 'Cinzel', serif;
-            color: #a8a8b3; /* Plata/Gris */
-            font-size: 1.2rem;
-            margin-top: 0;
-            margin-bottom: 40px;
-            letter-spacing: 3px;
-            font-weight: 300;
-        }
-
-        /* Secciones de Contenido */
-        .section-title {
-            font-family: 'Cinzel', serif;
-            color: #bfa15f;
-            font-size: 1.5rem;
-            letter-spacing: 1px;
-            margin-bottom: 20px;
-            border-bottom: 1px solid rgba(212, 175, 55, 0.2);
-            padding-bottom: 8px;
-            display: inline-block;
-        }
-
-        .about-card {
-            background-color: rgba(16, 22, 34, 0.6);
-            border: 1px solid rgba(212, 175, 55, 0.1);
-            border-radius: 8px;
-            padding: 25px;
-            margin-bottom: 45px;
-            text-align: left;
-            line-height: 1.6;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
-        }
-
-        .about-card p {
-            margin: 0;
-            font-weight: 300;
-            color: #ccd6f6;
-        }
-
-        /* Contenedor del Reproductor */
-        .player-section {
-            margin-bottom: 50px;
-        }
-
-        .player-container {
-            display: flex;
-            justify-content: center;
-            margin-top: 15px;
-        }
-
-        .player-container iframe {
-            border-radius: 8px;
-            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.7);
-            border: 1px solid rgba(212, 175, 55, 0.2);
-        }
-
-        /* Botones de Enlace Estilo Premium (Formato Grid de 2 Columnas) */
-        .links {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr); /* Crea dos columnas de igual tamaño */
-            gap: 15px; /* Espacio entre los botones */
-            max-width: 550px; /* Ampliamos un pelín el ancho para que quepan bien en parejas */
-            margin: 0 auto;
-        }
-
-        .btn {
-            background-color: #0e131f;
-            color: #ffffff;
-            padding: 16px 20px;
-            border-radius: 6px;
-            text-decoration: none;
-            font-weight: 600;
-            font-size: 0.95rem;
-            letter-spacing: 0.5px;
-            border: 1px solid #232d42;
-            transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-        }
-
-        /* Efecto Hover: Brillo dorado sutil y movimiento suave */
-        .btn:hover {
-            background-color: #131a2b;
-            border-color: #d4af37;
-            color: #d4af37;
-            transform: translateY(-2px);
-            box-shadow: 0 7px 14px rgba(212, 175, 55, 0.1);
-        }
-
-        /* Ajuste para pantallas pequeñas (Móviles) */
-        @media (max-width: 500px) {
-            .links {
-                grid-template-columns: 1fr; /* Pasa a 1 sola columna en móviles */
-            }
-        }
-
-    </style>
 </head>
 <body>
+
+    <nav class="main-nav">
+        <a href="index.html" class="active">Home</a>
+        <a href="contact.html">Contact</a>
+    </nav>
 
     <div class="hero-banner">
         <img src="assets/images/vgmi-banner-ship-no-words.png" alt="VGM Ireland Banner">
@@ -201,7 +48,6 @@
                 I am a music composer and sound designer focused on creating immersive acoustic environments for video games and interactive media. My passion lies in blending grand orchestral arrangements with modern synthesizers and analog instruments, though I also delve deep into ambient electronic soundscapes and chiptune. I bridge the gap between music production and gameplay by implementing adaptive audio that elevates the player's emotional journey.
             </p>
 
-            <!-- Grid de Habilidades Técnicas y Educación (Formato Optimizando de 3 Columnas) -->
             <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 20px; border-top: 1px solid rgba(212, 175, 55, 0.1); padding-top: 20px;">
                 <div>
                     <strong style="color: #d4af37; display: block; margin-bottom: 5px;">DAWs & Production</strong>
@@ -218,15 +64,15 @@
             </div>
         </div>
 
-       <div class="player-section">
+        <div class="player-section">
             <div class="section-title">Featured Album</div>
             <div class="player-container">
                 <iframe style="border: 0; width: 100%; max-width: 400px; height: 621px;" src="https://bandcamp.com/EmbeddedPlayer/album=1862052185/size=large/bgcol=0a0d14/linkcol=d4af37/transparent=true/" seamless>
-                    <a href="https://vgmireland.bandcamp.com/album/narrative-music-for-screen-play-vol-1">Narrative Music for Screen &amp; Play, Vol. 1 by Garman Blue</a>
+                    <a href="https://vgmireland.bandcamp.com/album/narrative-music-for-screen-play-vol-1">Narrative Music for Screen & Play, Vol. 1 by Garman Blue</a>
                 </iframe >
             </div>
         </div>
-           
+            
         <div class="player-section">
             <div class="section-title">Connect</div>
             <div class="links">
