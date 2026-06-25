@@ -11,6 +11,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght=500;700&family=Inter:wght=300;400;600&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
     <link rel="icon" type="image/png" href="assets/favicons/favicon.png">
 
@@ -79,30 +80,54 @@
             </div>
         </div>
                
-    <div class="section-title">Connect</div>
-        <div class="links">
-            <a href="https://www.breakingtunes.com/vgmireland" class="btn" target="_blank" rel="noopener">Breaking Tunes</a>
-            <a href="https://garmanblue.itch.io/" class="btn" target="_blank" rel="noopener">Itch.io</a>
-            <a href="https://www.linkedin.com/company/vgmireland/" class="btn" target="_blank" rel="noopener">LinkedIn</a>
-            <a href="https://www.youtube.com/@videogamemusicireland" class="btn" target="_blank" rel="noopener">Youtube</a>
+    <footer class="site-footer">
+    <!-- Bloque Superior: Logo y Navegación (Estilo Gameloft) -->
+    <div class="footer-top">
+        <div class="footer-logo">
+            <!-- Reemplaza 'logo.png' por la ruta real de tu logo cuando lo tengas en assets -->
+            <a href="index.html">
+                <img src="assets/images/vgmi-footer-logo.png" alt="VGM Ireland Logo" class="main-logo">
+            </a>
         </div>
-        
-    </div>
-</body>
 
-<footer class="main-footer">
+        <nav class="footer-nav">
+            <a href="contact.html">Contact</a>
+            <a href="#top">Back to top</a>
+        </nav>
+    </div>
+
     <hr class="footer-divider">
-    
-    <div class="footer-nav">
-        <a href="index.html">Home</a>
-        <a href="contact.html">Contact</a>
+
+    <!-- Bloque Central: Redes Sociales con Iconos Circulares -->
+    <div class="footer-social">
+        <span class="social-title">Find us on</span>
+        <div class="social-icons">
+            <a href="https://www.breakingtunes.com/vgmireland" target="_blank" rel="noopener" class="social-icon-btn btn-bt" title="Breaking Tunes">
+                <i class="fa-solid fa-music"></i>
+            </a>
+            <a href="https://garmanblue.itch.io/" target="_blank" rel="noopener" class="social-icon-btn btn-itch" title="Itch.io">
+                <i class="fa-brands fa-italic"></i>
+            </a>
+            <a href="https://www.linkedin.com/company/vgmireland/" target="_blank" rel="noopener" class="social-icon-btn btn-linkedin" title="LinkedIn">
+                <i class="fa-brands fa-linkedin-in"></i>
+            </a>
+            <a href="https://www.youtube.com/@videogamemusicireland" target="_blank" rel="noopener" class="social-icon-btn btn-youtube" title="YouTube">
+                <i class="fa-brands fa-youtube"></i>
+            </a>
+        </div>
     </div>
 
-    <div class="footer-credits">
-        <p>&copy; 2026 VGM Ireland. All rights reserved.</p>
+    <!-- Bloque Inferior: Copyright y Texto Legal -->
+    <div class="footer-bottom">
+        <p>&copy; <span id="current-year">2026</span> VGM Ireland. All rights reserved.</p>
         <p class="legal-text">All music, sound effects, and content on this website are the intellectual property of the author, unless otherwise stated.</p>
     </div>
 </footer>
+
+<!-- Script para el año dinámico automático -->
+<script>
+    document.getElementById('current-year').textContent = new Date().getFullYear();
+</script>
 </html>
 
 <!--Link spoty: https://open.spotify.com/artist/4BW9vFmR6Vwsm54u767gnl

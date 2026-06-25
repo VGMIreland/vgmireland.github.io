@@ -314,3 +314,107 @@ h2 {
     transform: translateY(-2px);
     box-shadow: 0 7px 14px rgba(212, 175, 55, 0.1);
 }
+
+/* --- ESTILOS DEL FOOTER ESTILO GAMELOFT --- */
+.site-footer {
+    background-color: #05070b; /* Un tono un pelín más oscuro o igual al fondo para dar continuidad */
+    padding: 60px 20px 30px 20px;
+    text-align: center;
+    margin-top: 80px;
+}
+
+/* Bloque Superior */
+.footer-top {
+    margin-bottom: 40px;
+}
+
+.main-logo {
+    max-width: 180px; /* Ajusta el tamaño de tu logo aquí */
+    height: auto;
+    margin-bottom: 25px;
+}
+
+.footer-nav a {
+    color: #ffffff;
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    transition: color 0.3s ease;
+}
+
+.footer-nav a:hover {
+    color: #d4af37; /* Tu dorado corporativo */
+}
+
+/* Divisores */
+.footer-divider {
+    border: 0;
+    height: 1px;
+    background: linear-gradient(to right, transparent, rgba(212, 175, 55, 0.3), transparent); /* Línea difuminada dorada sutil */
+    margin: 40px auto;
+    max-width: 800px;
+}
+
+/* Redes Sociales */
+.footer-social {
+    margin-bottom: 50px;
+}
+
+.social-title {
+    display: block;
+    color: #8a94a6;
+    font-size: 0.9rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+/* Botones Circulares */
+.social-icon-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    background-color: #111622; /* Fondo de los círculos por defecto */
+    color: #ffffff;
+    font-size: 1.2rem;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+/* Colores de marca individuales al pasar el ratón (Hover) */
+.btn-bt:hover { background-color: #d4af37; color: #000000; }       /* Dorado corporativo para Breaking Tunes */
+.btn-itch:hover { background-color: #ff4c4c; }                     /* Rojo Itch.io */
+.btn-linkedin:hover { background-color: #0077b5; }                 /* Azul LinkedIn */
+.btn-youtube:hover { background-color: #ff0000; }                  /* Rojo YouTube */
+
+.social-icon-btn:hover {
+    transform: translateY(-3px); /* Pequeña animación hacia arriba al pasar el ratón */
+}
+
+/* Bloque de Créditos Inferior */
+.footer-bottom {
+    color: #566175;
+    font-size: 0.85rem;
+    line-height: 1.6;
+}
+
+.footer-bottom p {
+    margin: 5px 0;
+}
+
+.legal-text {
+    font-size: 0.75rem;
+    color: #3b4554;
+    max-width: 600px;
+    margin: 10px auto 0 auto !important;
+}
