@@ -418,3 +418,58 @@ h2 {
     max-width: 600px;
     margin: 10px auto 0 auto !important;
 }
+
+/* ==========================================================================
+   5. ESTILOS ESPECÍFICOS PARA GARMAN BLUE
+   ========================================================================== */
+
+.gb-title {
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 3.5rem; /* Rajdhani es un pelín más compacta, así que le sienta bien subir un poco el tamaño */
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 8px; /* Espaciado ancho como el logo */
+    margin-top: 20px;
+    margin-bottom: 5px;
+
+    /* Degradado Diagonal a 135 grados */
+   /* Degradado diagonal: blanco/plata prolongado hasta el 60% */
+    background: linear-gradient(135deg, 
+        #ffffff 0%, 
+        #ffffff 35%, 
+        #c2e0ff 55%, 
+        #3a7bd5 80%, 
+        #0d2e61 100%
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+
+    filter: drop-shadow(0px 4px 12px rgba(0, 162, 255, 0.3));
+
+
+}
+
+.gb-subtitle {
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 1.1rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 5px; /* Mantiene la estética limpia y espaciada del logo */
+    margin-top: -5px;
+    margin-bottom: 40px;
+
+    /* Degradado diagonal más suave y claro para no perder legibilidad */
+    background: linear-gradient(145deg, 
+        #ffffff 0%, 
+        #ffffff 30%, 
+        #d0e4ff 50%, 
+        #5b94e8 100%
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+
+    /* Resplandor azul sutil */
+    filter: drop-shadow(0px 2px 8px rgba(0, 162, 255, 0.25));
+}
