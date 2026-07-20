@@ -473,3 +473,55 @@ h2 {
     /* Resplandor azul sutil */
     filter: drop-shadow(0px 2px 8px rgba(0, 162, 255, 0.25));
 }
+
+/* ==========================================================================
+   ESTILOS DE MARCA EN TEXTO
+   ========================================================================== */
+
+/* Garman Blue en el texto: Rajdhani, negrilla y degradado azul */
+.brand-gb {
+    font-family: 'Rajdhani', sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    
+    /* Degradado idéntico al de su título */
+    background: linear-gradient(235deg, #77a5e9 30%, #5b94e8 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    
+    /* Resplandor azul sutil */
+    filter: drop-shadow(0px 2px 4px rgba(0, 162, 255, 0.4));
+}
+
+/* VGM Ireland en el texto: Cinzel, negrilla y dorado brillante */
+.brand-vgmi {
+    font-family: 'Cinzel', serif;
+    font-weight: 700;
+    letter-spacing: 1px;
+    
+    /* Dorado con ligero degradado */
+    background: linear-gradient(135deg, #d4b54d 0%, #d4af37 60%, #bfa15f 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    
+    /* Resplandor dorado sutil */
+    filter: drop-shadow(0px 2px 4px rgba(212, 175, 55, 0.4));
+}
+
+/* Botón destacado de Spotify para Garman Blue */
+.gb-spotify-btn {
+    border-color: #00a2ff;
+    color: #00a2ff;
+    transition: all 0.3s ease;
+}
+
+.gb-spotify-btn:hover {
+    background-color: rgba(0, 162, 255, 0.15);
+    border-color: #00a2ff;
+    color: #ffffff;
+    box-shadow: 0 0 15px rgba(0, 162, 255, 0.4);
+    transform: translateY(-2px);
+}
