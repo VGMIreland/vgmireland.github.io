@@ -26,7 +26,7 @@ body {
 /* Títulos tipografía Cinzel */
 h1 {
     font-family: 'Cinzel', serif;
-    color: #d4af37; /* Dorado principal */
+    color: #d4af37;
     margin-top: 20px;
     margin-bottom: 5px;
     font-size: 3rem;
@@ -45,7 +45,7 @@ h2 {
 
 .subtitle {
     font-family: 'Cinzel', serif;
-    color: #a8a8b3; /* Plata/Gris */
+    color: #a8a8b3;
     font-size: 1.2rem;
     margin-top: 0;
     margin-bottom: 40px;
@@ -100,7 +100,7 @@ h2 {
 }
 
 /* ==========================================================================
-   3. PÁGINA PRINCIPAL (INDEX / HOME)
+   3. PÁGINA PRINCIPAL (INDEX / HOME) - BANNER ORIGINAL VGM IRELAND
    ========================================================================== */
 .hero-banner {
     width: 100%;
@@ -188,9 +188,9 @@ h2 {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
     display: inline-block;
     margin-bottom: 60px;
-    }
+}
 
-.btn:hover {
+.btn:hover, .ctabtn:hover {
     background-color: #131a2b;
     border-color: #d4af37;
     color: #d4af37;
@@ -198,15 +198,6 @@ h2 {
     box-shadow: 0 7px 14px rgba(212, 175, 55, 0.1);
 }
 
-.ctabtn:hover {
-    background-color: #131a2b;
-    border-color: #d4af37;
-    color: #d4af37;
-    transform: translateY(-2px);
-    box-shadow: 0 7px 14px rgba(212, 175, 55, 0.1);
-}
-
-/* Respuestas Móviles */
 @media (max-width: 500px) {
     .links {
         grid-template-columns: 1fr;
@@ -262,7 +253,6 @@ h2 {
     color: #d4af37;
 }
 
-/* Inputs y Formulario */
 .form-group {
     margin-bottom: 20px;
     display: flex;
@@ -315,21 +305,24 @@ h2 {
     box-shadow: 0 7px 14px rgba(212, 175, 55, 0.1);
 }
 
-/* --- ESTILOS DEL FOOTER ESTILO GAMELOFT --- */
+/* ==========================================================================
+   FOOTER
+   ========================================================================== */
 .site-footer {
-    background-color: #05070b; /* Un tono un pelín más oscuro o igual al fondo para dar continuidad */
+    background-color: #05070b;
     padding: 60px 20px 30px 20px;
     text-align: center;
     margin-top: 80px;
+    width: 100%;
+    box-sizing: border-box;
 }
 
-/* Bloque Superior */
 .footer-top {
     margin-bottom: 40px;
 }
 
 .main-logo {
-    max-width: 180px; /* Ajusta el tamaño de tu logo aquí */
+    max-width: 180px;
     height: auto;
     margin-bottom: 25px;
 }
@@ -344,19 +337,17 @@ h2 {
 }
 
 .footer-nav a:hover {
-    color: #d4af37; /* Tu dorado corporativo */
+    color: #d4af37;
 }
 
-/* Divisores */
 .footer-divider {
     border: 0;
     height: 1px;
-    background: linear-gradient(to right, transparent, rgba(212, 175, 55, 0.3), transparent); /* Línea difuminada dorada sutil */
+    background: linear-gradient(to right, transparent, rgba(212, 175, 55, 0.3), transparent);
     margin: 40px auto;
     max-width: 800px;
 }
 
-/* Redes Sociales */
 .footer-social {
     margin-bottom: 50px;
 }
@@ -376,7 +367,6 @@ h2 {
     gap: 15px;
 }
 
-/* Botones Circulares */
 .social-icon-btn {
     display: flex;
     align-items: center;
@@ -384,24 +374,22 @@ h2 {
     width: 45px;
     height: 45px;
     border-radius: 50%;
-    background-color: #111622; /* Fondo de los círculos por defecto */
+    background-color: #111622;
     color: #ffffff;
     font-size: 1.2rem;
     text-decoration: none;
     transition: all 0.3s ease;
 }
 
-/* Colores de marca individuales al pasar el ratón (Hover) */
-.btn-bt:hover { background-color: #d4af37; color: #000000; }       /* Dorado corporativo para Breaking Tunes */
-.btn-itch:hover { background-color: #ff4c4c; }                     /* Rojo Itch.io */
-.btn-linkedin:hover { background-color: #0077b5; }                 /* Azul LinkedIn */
-.btn-youtube:hover { background-color: #ff0000; }                  /* Rojo YouTube */
+.btn-bt:hover { background-color: #d4af37; color: #000000; }
+.btn-itch:hover { background-color: #ff4c4c; }
+.btn-linkedin:hover { background-color: #0077b5; }
+.btn-youtube:hover { background-color: #ff0000; }
 
 .social-icon-btn:hover {
-    transform: translateY(-3px); /* Pequeña animación hacia arriba al pasar el ratón */
+    transform: translateY(-3px);
 }
 
-/* Bloque de Créditos Inferior */
 .footer-bottom {
     color: #566175;
     font-size: 0.85rem;
@@ -425,15 +413,12 @@ h2 {
 
 .gb-title {
     font-family: 'Rajdhani', sans-serif;
-    font-size: 3.5rem; /* Rajdhani es un pelín más compacta, así que le sienta bien subir un poco el tamaño */
+    font-size: 3.5rem;
     font-weight: 700;
     text-transform: uppercase;
-    letter-spacing: 8px; /* Espaciado ancho como el logo */
+    letter-spacing: 8px;
     margin-top: 20px;
     margin-bottom: 5px;
-
-    /* Degradado Diagonal a 135 grados */
-   /* Degradado diagonal: blanco/plata prolongado hasta el 60% */
     background: linear-gradient(135deg, 
         #ffffff 0%, 
         #ffffff 35%, 
@@ -444,10 +429,7 @@ h2 {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
-
     filter: drop-shadow(0px 4px 12px rgba(0, 162, 255, 0.3));
-
-
 }
 
 .gb-subtitle {
@@ -455,11 +437,9 @@ h2 {
     font-size: 1.1rem;
     font-weight: 600;
     text-transform: uppercase;
-    letter-spacing: 5px; /* Mantiene la estética limpia y espaciada del logo */
+    letter-spacing: 5px;
     margin-top: -5px;
     margin-bottom: 40px;
-
-    /* Degradado diagonal más suave y claro para no perder legibilidad */
     background: linear-gradient(145deg, 
         #ffffff 0%, 
         #ffffff 30%, 
@@ -469,49 +449,33 @@ h2 {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
-
-    /* Resplandor azul sutil */
     filter: drop-shadow(0px 2px 8px rgba(0, 162, 255, 0.25));
 }
 
-/* ==========================================================================
-   ESTILOS DE MARCA EN TEXTO
-   ========================================================================== */
-
-/* Garman Blue en el texto: Rajdhani, negrilla y degradado azul */
+/* Marcas en texto */
 .brand-gb {
     font-family: 'Rajdhani', sans-serif;
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 1px;
-    
-    /* Degradado idéntico al de su título */
     background: linear-gradient(235deg, #77a5e9 30%, #5b94e8 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
-    
-    /* Resplandor azul sutil */
     filter: drop-shadow(0px 2px 4px rgba(0, 162, 255, 0.4));
 }
 
-/* VGM Ireland en el texto: Cinzel, negrilla y dorado brillante */
 .brand-vgmi {
     font-family: 'Cinzel', serif;
     font-weight: 700;
     letter-spacing: 1px;
-    
-    /* Dorado con ligero degradado */
     background: linear-gradient(135deg, #d4b54d 0%, #d4af37 60%, #bfa15f 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
-    
-    /* Resplandor dorado sutil */
     filter: drop-shadow(0px 2px 4px rgba(212, 175, 55, 0.4));
 }
 
-/* Botón destacado de Spotify para Garman Blue */
 .gb-spotify-btn {
     border-color: #00a2ff;
     color: #00a2ff;
@@ -524,4 +488,75 @@ h2 {
     color: #ffffff;
     box-shadow: 0 0 15px rgba(0, 162, 255, 0.4);
     transform: translateY(-2px);
+}
+
+/* ==========================================================================
+   BANNER EXCLUSIVO DE GARMAN BLUE (Efecto Horizonte Synthwave)
+   ========================================================================== */
+
+.hero-banner-gb {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #05070b;
+    padding: 50px 20px;
+    overflow: hidden;
+    width: 100%;
+    max-width: 1200px;
+    border-radius: 12px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6);
+    margin-top: 20px;
+    box-sizing: border-box;
+}
+
+/* Línea de horizonte brillante de extremo a extremo */
+.hero-banner-gb::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, 
+        transparent 0%, 
+        rgba(0, 162, 255, 0.3) 15%, 
+        #ffffff 48%, 
+        #ffd700 50%, 
+        #ffffff 52%, 
+        rgba(0, 162, 255, 0.3) 85%, 
+        transparent 100%
+    );
+    box-shadow: 
+        0 0 12px rgba(0, 162, 255, 0.8),
+        0 0 25px rgba(212, 175, 55, 0.4);
+    transform: translateY(-50%);
+    z-index: 1;
+}
+
+/* Resplandor suave vertical en el centro */
+.hero-banner-gb::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 70%;
+    height: 100px;
+    background: radial-gradient(ellipse at center, 
+        rgba(0, 162, 255, 0.2) 0%, 
+        rgba(212, 175, 55, 0.08) 45%, 
+        transparent 75%
+    );
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+    z-index: 1;
+}
+
+/* Ajuste del logo sobre el destello */
+.hero-banner-gb img {
+    position: relative;
+    z-index: 2;
+    max-width: 200px;
+    height: auto;
+    filter: drop-shadow(0 0 15px rgba(5, 7, 11, 0.9));
 }
