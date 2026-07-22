@@ -105,17 +105,28 @@ h2 {
 .hero-banner {
     width: 100%;
     max-width: 1200px;
-    max-height: 330px;
+    height: 330px; /* Recuperamos la altura fija de antes */
     margin-top: 20px;
-    border-radius: 12px;
+    box-sizing: border-box;
+    position: relative;
     overflow: hidden;
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6);
+
+    /* 
+       MÁSCARA RADIAL CONFINADA:
+       Aplica el fundido a negro/transparente dentro de los 330px de altura.
+       Los porcentajes 60% 50% fuerzan un desvanecimiento más agresivo en los lados.
+    */
+    -webkit-mask-image: radial-gradient(ellipse 55% 60% at 50% 50%, black 20%, transparent 100%);
+    mask-image: radial-gradient(ellipse 55% 60% at 50% 50%, black 20%, transparent 100%);
 }
 
 .hero-banner img {
     width: 100%;
-    height: auto;
+    height: 100%;
+    object-fit: cover; /* Mantiene la proporción del barco pirata recortando lo sobrante sin deformar */
+    object-position: center; /* Centra el encuadre de la ilustración */
     display: block;
+    filter: contrast(1.05) brightness(0.95);
 }
 
 .about-card {
@@ -511,8 +522,8 @@ h2 {
        Mantiene el centro 100% opaco y desvanece de forma suave y circular 
        hacia los 4 bordes (arriba, abajo, izquierda y derecha)
     */
-    -webkit-mask-image: radial-gradient(ellipse 70% 60% at 50% 50%, black 30%, transparent 100%);
-    mask-image: radial-gradient(ellipse 70% 60% at 50% 50%, black 30%, transparent 100%);
+    -webkit-mask-image: radial-gradient(ellipse 55% 60% at 50% 50%, black 30%, transparent 100%);
+    mask-image: radial-gradient(ellipse 55% 60% at 50% 50%, black 30%, transparent 100%);
 
     /* Eliminamos box-shadows duros que puedan marcar bordes rectangulares */
     box-shadow: none;
