@@ -336,6 +336,14 @@ h2 {
     max-width: 180px;
     height: auto;
     margin-bottom: 25px;
+
+    /* 
+       MÁSCARA RADIAL: 
+       Mantiene el centro 100% opaco y desvanece de forma suave y circular 
+       hacia los 4 bordes (arriba, abajo, izquierda y derecha)
+    */
+    -webkit-mask-image: radial-gradient(ellipse 55% 60% at 50% 50%, black 30%, transparent 100%);
+    mask-image: radial-gradient(ellipse 60% 60% at 50% 50%, black 30%, transparent 100%);
 }
 
 .footer-nav a {
