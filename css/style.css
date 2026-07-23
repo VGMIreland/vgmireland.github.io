@@ -105,17 +105,17 @@ h2 {
 .hero-banner {
     width: 100%;
     max-width: 1200px;
-    height: 330px; /* Recuperamos la altura fija de antes */
+    
+    /* En vez de height: 330px fijo: */
+    height: auto;
+    max-height: 330px; 
+    aspect-ratio: 16 / 5; /* O una proporción panorámica que encaje bien */
+    
     margin-top: 20px;
     box-sizing: border-box;
     position: relative;
     overflow: hidden;
 
-    /* 
-       MÁSCARA RADIAL CONFINADA:
-       Aplica el fundido a negro/transparente dentro de los 330px de altura.
-       Los porcentajes 60% 50% fuerzan un desvanecimiento más agresivo en los lados.
-    */
     -webkit-mask-image: radial-gradient(ellipse 55% 60% at 50% 50%, black 20%, transparent 100%);
     mask-image: radial-gradient(ellipse 55% 60% at 50% 50%, black 20%, transparent 100%);
 }
@@ -123,10 +123,27 @@ h2 {
 .hero-banner img {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Mantiene la proporción del barco pirata recortando lo sobrante sin deformar */
-    object-position: center; /* Centra el encuadre de la ilustración */
+    object-fit: cover;
+    /* Si el barco está a la derecha, en encuadres ajustados da prioridad a esa zona: */
+    object-position: 65% center; 
     display: block;
     filter: contrast(1.05) brightness(0.95);
+}
+
+/* Ajuste específico para móviles (pantallas de 768px o menos) */
+@media (max-width: 768px) {
+    .hero-banner {
+        max-height: 200px; /* Reducimos la altura en móvil para no forzar el zoom lateral */
+        
+        /* Abrimos la elipse horizontal al 80% o 85% para no devorar los lados en móvil */
+        -webkit-mask-image: radial-gradient(ellipse 85% 70% at 50% 50%, black 30%, transparent 100%);
+        mask-image: radial-gradient(ellipse 85% 70% at 50% 50%, black 30%, transparent 100%);
+    }
+
+    .hero-banner img {
+        /* Centramos el encuadre ligeramente hacia la derecha donde está el barco */
+        object-position: 70% center; 
+    }
 }
 
 .about-card {
@@ -591,3 +608,4 @@ h2 {
     height: auto;
     filter: drop-shadow(0 0 15px rgba(5, 7, 11, 0.9));
 }
+
