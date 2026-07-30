@@ -78,7 +78,9 @@ h2 {
     gap: 20px;
     font-family: 'Cinzel', serif;
     letter-spacing: 2px;
+    flex-wrap: wrap;
 }
+
 
 .main-nav a {
     color: #a8a8b3;
@@ -131,20 +133,13 @@ h2 {
 }
 
 /* Ajuste específico para móviles (pantallas de 768px o menos) */
-@media (max-width: 768px) {
-    .hero-banner {
-        max-height: 200px; /* Reducimos la altura en móvil para no forzar el zoom lateral */
-        
-        /* Abrimos la elipse horizontal al 80% o 85% para no devorar los lados en móvil */
-        -webkit-mask-image: radial-gradient(ellipse 85% 70% at 50% 50%, black 30%, transparent 100%);
-        mask-image: radial-gradient(ellipse 85% 70% at 50% 50%, black 30%, transparent 100%);
-    }
 
-    .hero-banner img {
-        /* Centramos el encuadre ligeramente hacia la derecha donde está el barco */
-        object-position: 70% center; 
-    }
+
+.hero-banner img {
+    /* Centramos el encuadre ligeramente hacia la derecha donde está el barco */
+    object-position: 70% center; 
 }
+
 
 .about-card {
     background-color: rgba(16, 22, 34, 0.6);
@@ -188,7 +183,7 @@ h2 {
     margin: 0 auto;
 }
 
-.btn {
+.btn, .ctabtn {
     background-color: #0e131f;
     color: #ffffff;
     padding: 16px 20px;
@@ -203,17 +198,6 @@ h2 {
 }
 
 .ctabtn {
-    background-color: #0e131f;
-    color: #ffffff;
-    padding: 16px 20px;
-    border-radius: 6px;
-    text-decoration: none;
-    font-weight: 600;
-    font-size: 0.95rem;
-    letter-spacing: 0.5px;
-    border: 1px solid #232d42;
-    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
     display: inline-block;
     margin-bottom: 60px;
 }
@@ -226,11 +210,6 @@ h2 {
     box-shadow: 0 7px 14px rgba(212, 175, 55, 0.1);
 }
 
-@media (max-width: 500px) {
-    .links {
-        grid-template-columns: 1fr;
-    }
-}
 
 /* ==========================================================================
    4. PÁGINA DE CONTACTO (CONTACT)
@@ -360,7 +339,7 @@ h2 {
        hacia los 4 bordes (arriba, abajo, izquierda y derecha)
     */
     -webkit-mask-image: radial-gradient(ellipse 55% 60% at 50% 50%, black 30%, transparent 100%);
-    mask-image: radial-gradient(ellipse 60% 60% at 50% 50%, black 30%, transparent 100%);
+    mask-image: radial-gradient(ellipse 55% 60% at 50% 50%, black 30%, transparent 100%);
 }
 
 .footer-nav a {
@@ -609,3 +588,35 @@ h2 {
     filter: drop-shadow(0 0 15px rgba(5, 7, 11, 0.9));
 }
 
+/* ==========================================
+   BREAKPOINT 1: Tablets y Móviles (≤ 768px)
+   ========================================== */
+@media (max-width: 768px) {
+  /* Navegación principal */
+  .main-nav {
+    justify-content: center;
+  }
+
+  /* Banners principales y máscaras */
+  .hero-banner,
+  .hero-banner-gb {
+    /* Ajustes de posición o máscara que tenías a 768px */
+    -webkit-mask-image: radial-gradient(circle, rgba(0,0,0,1) 70%, rgba(0,0,0,0) 100%);
+    mask-image: radial-gradient(circle, rgba(0,0,0,1) 70%, rgba(0,0,0,0) 100%);
+  }
+}
+
+/* ==========================================
+   BREAKPOINT 2: Pantallas estrechas (≤ 480px)
+   ========================================== */
+@media (max-width: 480px) {
+  /* Rejillas y enlaces a 1 columna */
+  .links {
+    grid-template-columns: 1fr;
+  }
+
+  /* Ajustes finos de tipografía o padding si fueran necesarios */
+  .main-nav {
+    padding: 0.5rem;
+  }
+}
